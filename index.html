@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> <!-- активация responsive-дизайна и запрет на масштабирование страницы пользователем -->
+		<script src="https://kit.fontawesome.com/4871a893c0.js" crossorigin="anonymous"></script> <!-- подключаем бесплатные иконки -->
+		<title>Методология БЭМ</title>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="assets/img/partners/2.png" type="image/x-icon">
+	</head>
+
+	<body>
+		<main> <!-- main -->
+
+			<section class="intro" id="home">
+				<figure>
+					<img class="intro__logo" src="assets/img/intro/logo.png" alt="logo">
+					<figcaption>Logo title</figcaption>
+				</figure>
+				<div class="title">
+					<h1 class="header__suptitle">Clear, smart, attractive design</h1>
+					<p class="header__subtitle">for your app, logo, website</p>
+				</div>
+				<div class="intro__decor"></div>
+				<div class="link__wrapper btn_decor1">
+					<a class="intro__link" href="#nav">read more</a>
+				</div>
+				<div class="btn__wrapper btn_decor2">
+				<a href="#footer"><img src="assets/img/intro/Arrow-down.png" alt=""></a>
+				</div>
+			</section>
+
+			<!-- Navigation -->
+			<nav id="nav" class="nav">
+				<a class="nav__item" href="#home">home</a>
+				<a class="nav__item" href="#about_us">about us</a>
+				<a class="nav__item" href="#portfolio">portfolio</a>
+				<a class="nav__item" href="#contact">contact</a>
+			</nav>
+
+			<!-- About us -->
+			<section class="container">
+				<h2 id="about_us" class="header__title">about</h2>
+				<div class="header__decor"></div>
+				<div class="about__subtitle">We specialize in contemporary, functional, and stunning websites with design that really brings that "WOW" factor.<br> 
+				In our design process, we make sure to stay one step ahead of the latest trends,<br> 
+				never forgetting to abide by key web standards.</div>
+				<div class="about">
+					<div class="about__item">
+						<div class="about__img1"></div>
+							<p class="about__desc">WEB</p>
+							<p class="about__subdesc">We tend to deliver unique and <br>functional design, through <br>innovation and creativity.</p>
+					</div>
+					<div class="about__item">
+						<div class="about__img2"></div>
+							<p class="about__desc">iOS AND ANDROID</p>
+							<p class="about__subdesc">We seek to bring new businesses and <br>customers closer together through valuable <br>insights and proper targeting.</p>
+					</div>
+					<div class="about__item">
+						<div class="about__img3"></div>
+							<p class="about__desc">MARKETING</p>
+							<p class="about__subdesc">We’ll help you establish the right goals <br>and build the right paths. Success depends <br>on setting the right intention</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Portfolio -->
+			<section class="portfolio">
+				<div class="container">
+					<h2 id="portfolio" class="header__title">portfolio</h2>
+					<div class="header__decor"></div>
+					<div class="portfolio__nav">
+						<div class="portfolio__nav">
+							<a class="nav__item" href="#not_work_link">all</a>
+							<a class="nav__item" href="#not_work_link">web</a>
+							<a class="nav__item" href="#not_work_link">apps</a>
+							<a class="nav__item" href="#not_work_link">other</a>
+						</div>
+					</div>
+					<div class="portfolio__container">
+						<div class="portfolio__item polygon"></div>
+						<div class="portfolio__item"></div>
+						<div class="portfolio__item">
+							<iframe width="538" height="365" src="https://www.youtube.com/embed/nTtuiBXKp88" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<div class="portfolio__item"></div>
+						<div class="portfolio__item"></div>
+						<div class="portfolio__item"></div>
+					</div>
+					<div class="link__wrapper">
+						<a class="portfolio__link" href="#">read more</a>
+					</div>
+				</div>
+			</section>
+		</main> <!-- /main -->
+
+		<!-- Partners -->
+		<section class="partners">
+			<div class="container">
+				<h2 class="partners__desc">Our partners</h2>
+				<div class="partners__container">
+					<div class="partners__item">
+							<img src="assets/img/partners/1.png" alt="">
+					</div>
+					<div class="partners__item">
+							<img src="assets/img/partners/2.png" alt="">
+					</div>
+					<div class="partners__item">
+							<img src="assets/img/partners/3.png" alt="">
+					</div>
+					<div class="partners__item">
+							<img src="assets/img/partners/4.png" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section class="container">
+			<h2 id="contact" class="header__title">contact</h2>
+			<div class="header__decor"></div>
+
+			<div class="contact">
+				<div class="contact__column1">
+					<div class="contact__form">
+						<form name="contact" method="post" action="/">
+							<div class="form">
+								<p class="input__suptitle">Your name<br>
+			 					<input type="text" class="form__area"></p>
+			 					<p class="input__suptitle">Your e-mail<br>
+			 					<input type="email" class="form__area"></p>
+							</div>
+							<p class="input__suptitle">message<br>
+			 				<textarea name="message" class="message__area"></textarea>
+						</form>
+					</div>
+				</div>
+				<div class="contact__column2">
+					<div class="contact__suptitle">Have an idea for a project? Just looking to explore and see the possibilities? <br> I'm here to help.<br><br><b>First & last name</b><br>
+						<div class="fontsize">
+							<a href="#not_work_link"><i class="fab fa-facebook-square"></i></a>
+							<a href="#not_work_link"><i class="fab fa-linkedin"></i></a>
+						</div>
+						<address class="address">e-mail: <b>example@gmail.com</b></address>
+					</div>
+				</div>
+			</div>
+			<div class="link__wrapper">
+				<input type="button" value="send" class="contact__btn">
+				<!-- <a class="contact__btn" href="#">send</a> -->
+			</div>
+		</section>
+
+		<footer id="footer" class="footer">
+			<div class="container">
+				<img class="footer__image" src="assets/img/footer/logo.png" alt="">
+				<div class="footer__nav">
+					<a class="footer__item" href="#home">Home</a>
+					<a class="footer__item" href="#not_work_link">Facebook</a>
+					<a class="footer__item" href="#not_work_link">Linkedin</a>
+					<a class="footer__item" href="#contact">Contact</a>
+				</div>
+				<div class="footer__copyrights">© 2015. All Rights Reserved</div>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,694 @@
+/* обнуление стилей */
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* конец обнуления стилей */
+
+body { /* настройки шрифта по умолчанию для всей страницы */
+  font-family: 'Lato', regular;
+  font-weight: 400;
+}
+
+::selection { /* стиль для выделенного пользователем текста */
+  color: #00ffff;
+  background-color: #000063;
+}
+
+/* стили ссылок в правильном порядке */
+
+a:link {
+  color: #000;
+}
+
+a:visited {
+  color: #000;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:active {
+  color: #000;
+}
+
+/* container */
+
+.container { /* контейнером мы ограничиваем ширину блока с контентом */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Intro */
+
+.intro {
+  height: 100vh; /* блок будет растягиваться по высоте и занимать 100% экрана посетителя */
+  /* width: 100vw; /* блок будет растягиваться по ширине и занимать 100% экрана посетителя */
+  background: url("assets/img/intro/bg.jpg") center no-repeat;
+  -webkit-background-size: cover; /* вендорный префикс для некоторых других браузеров, чтобы фон растягивался на всю площадь экрана */
+  background-size: cover; /* изображение будет масштабироваться по большей стороне (если размер изображения больше размеров контейнера, то оно поместится не полностью) */
+  /* background-size: contain; изображение будет масштабироваться по меньшей стороне (поместится с сохранением пропорций) */
+}
+
+.intro__logo {
+  display: block; /* делаем картинку блочным объектом. Без этого картинка как минимум не будет двигаться, потому что img это строчный объект, а на строчные объекты margin не действует */
+  max-width: 100%; /* максимальная ширина блока будет равна ста процентам его содержимого. В таком случае, при любом размере окна этот блок всё равно должен показывать 100% своего содержимого, а значит блок будет подгоняться под ширину вьюпорта(видимую часть страницы). Тоесть, если сделать размер окна меньше чем размер картинки, картинка будет пропорционально сжиматься вместе с окном. Но если сделать размер окна больше чем размер картинки, картинка растягиваться не будет, ибо она уже показывается на 100% своих размеров */
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+figcaption {
+  margin-top: 12px;
+  color: #ccc;
+  text-align: center;
+}
+
+.title {
+  padding-top: 159px;
+}
+
+.header__suptitle {
+  font-size: 34px;
+  text-transform: uppercase;
+  font-weight: 900; /* мы подключили шрифты Lato нескольких версий. Версия Black(так показывается в фотошопе) означает толщину 900, это можно посмотреть на fonts.google.com */
+  color: #fff;
+  letter-spacing: 0.16em; /* это можно считать что равно значению 160 в фотошопе в параметре "трекинг для выделенных символов */
+  max-width: 100%; /* максимальная ширина блока нужна чтоб работал margin, и чтобы была адаптивность */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header__subtitle {
+  font-size: 26px;
+  font-weight: 400; /* 400 это вес шрифта по умолчанию(который задан нами в body), значит его не обязательно писать */
+  color: #fff;
+  letter-spacing: 0.16em;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+после 290px нужно пропорциональное уменьшение текста !
+
+.intro__decor {
+  height: 2px;
+  width: 105px;
+  max-width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 49px;
+}
+
+.link__wrapper {
+  text-align: center;
+  max-width: 100%; /* в этом случае max-width для адаптивности будет хуже: ссылка оформленная под кнопку будет делиться на некрасивые части, поэтому лучше пусть будет единая кнопка */
+}
+
+.btn__wrapper {
+  width: 17px;
+  margin: 0 auto;
+}
+
+.btn_decor1 {
+  margin-top: 227px;
+}
+
+.btn_decor2 {
+  margin-top: 75px;
+}
+
+.intro__link {
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  padding: 17px 40px;
+  text-align: center;
+}
+
+@media (max-width: 224px) /* применять эти свойства для экранов с шириной максимум до 224 px */ {
+  .intro__link {
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+a.intro__link {
+  color: #fff;
+}
+
+a.intro__link:visited {
+  color: #fff;
+}
+
+/* Navigation */
+
+.nav {
+  border-bottom: 1px solid #f2f2f2;
+  height: 58px;
+  display: flex; /* Включает flex контекст для всех потомков первого уровня */
+  justify-content: center; /* для контейнера с фиксированной шириной подойдёт justify-content: space-evenly; */
+}
+
+.nav__item { /* параметры ссылки */
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #3c3c3c;
+  padding: 22px 0px;
+  margin-right: 20px;
+  width: 95px;
+}
+
+.nav__item:last-child { /* параметры последней ссылки */
+  margin-right: 0;
+}
+
+.nav__item:hover { /* параметры ссылки при наведении */
+  color: #ada074;
+  font-weight: 400;
+}
+
+/* Header */
+
+.header__title {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-align: center;
+  padding-top: 103px;
+}
+
+.header__decor {
+  height: 1px;
+  width: 81px;
+  max-width: 100%;
+  background-color: #000;
+  margin: 0 auto;
+  margin-top: 29px;
+}
+
+/* About */
+
+.about__subtitle {
+  color: #868585;
+  font-size: 13.94px;
+  text-align: center;
+  margin-top: 37px;
+  line-height: 2;
+}
+
+.about {
+  max-width: 1100px;
+  margin-top: 73px;
+  display: flex;
+  justify-content: center;
+}
+
+.about__item {
+  display: block;
+  width: 285px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.about__img1 {
+  border: 2px solid #f0f0f0;
+  border-radius: 50%;
+  background: url(assets/img/about/1.png) no-repeat center;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 36px;
+}
+
+.about__img2 {
+  border: 2px solid #f0f0f0;
+  border-radius: 50%;
+  background: url(assets/img/about/2.png) no-repeat 30px 28px;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 36px;
+}
+
+.about__img3 {
+  border: 2px solid #f0f0f0;
+  border-radius: 50%;
+  background: url(assets/img/about/3.png) no-repeat 28px 29px;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 36px;
+}
+
+.about__desc {
+  text-align: center;
+  margin: 0 auto;
+  color: #000;
+  font-size: 22px;
+  letter-spacing: 0.16em;
+  margin-bottom: 27px;
+}
+
+.about__subdesc {
+  text-align: center;
+  color: #868585;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/* Portfolio */
+
+.portfolio {
+  background: #f3f3f3;
+}
+
+.portfolio__nav {
+  border-bottom: 1px solid #f2f2f2;
+  display: flex; /* Включает flex контекст для всех потомков первого уровня */
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 1126px) { /* применять эти свойства для экранов с шириной минимум в 1126 px */
+  .portfolio__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .portfolio__item {
+    background: #ccc url(assets/img/intro/logo.png) no-repeat;
+    background-size: 100% 100%;
+    width: 538px;
+    height: 365px;
+    margin-bottom: 18px;
+  }
+
+  .polygon {
+    clip-path: polygon(5% -3%, 100% 12%, 100% 80%, 75% 75%, 75% 100%, 60% 75%, 20% 80%);
+  }
+
+  .portfolio__item:nth-child(even) { /* для чётных элементов */
+    margin-right: 0;
+  }
+
+  .portfolio__item:nth-child(odd) { /* для нечётных элементов */
+    margin-right: 24px;
+  }
+
+  .portfolio__item:nth-child(even):hover { /* для чётных элементов */
+    border: 20px solid #f00;
+  }
+
+  .portfolio__item:nth-child(odd):hover { /* для нечётных элементов */
+    border: 8px solid #00f;
+  }
+
+  .portfolio__item:nth-child(2):hover {
+    transition: border .4s ease-in; /* анимация имеет медленное начало и быстрый конец */
+  }
+
+  .portfolio__item:nth-child(3):hover {
+    transform: skewX(-15deg);
+    transition: transform .5s linear;
+  }
+
+  .portfolio__item:nth-child(4):hover {
+    transform: scale(1.3);
+    transition: transform .1s linear;
+    border: none;
+  }
+
+  .portfolio__item:nth-child(5):hover {
+    transform-origin: 0 50%; /* координаты точки трансформации */
+    transform: perspective(400px) rotateY(40deg);
+    transition: transform .5s linear;
+  }
+}
+
+@media (max-width: 1125px) { /* применять эти свойства для экранов с шириной максимум до 1125 px */
+  .portfolio__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  }
+
+  .portfolio__item {
+      background: #ccc url(assets/img/intro/bg.jpg) no-repeat;
+      background-size: 100% 100%;
+      width: 538px;
+      height: 365px;
+      margin-right: 13px;
+      margin-left: 13px;
+      margin-bottom: 20px;
+  }
+}
+
+.portfolio__link {
+  text-transform: uppercase;
+  color: #000;
+  border: 2px solid #000;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  padding: 17px 43px;
+  text-align: center;
+  display: inline-block; /* чтобы сработал отступ вниз от ссылки для расширения серого фона */
+  margin-top: 47px;
+  margin-bottom: 62px;
+}
+
+/* Partners */
+
+.partners {
+  background: url(assets/img/partners/bg.jpg) no-repeat center;
+  height: 389px;
+}
+
+.partners__desc {
+  text-align: center;
+  color: #fff;
+  font-size: 30.36px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  display: inline-block;
+  margin-top: 95px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.partners__container {
+  display: flex;
+  justify-content: center;
+}
+
+.partners__item {
+  margin-right: 109px;
+}
+
+.partners__item:last-child {
+  margin-right: 0;
+}
+
+.partners__item:hover {
+  position: relative;
+  top: -15px;
+  z-index: 1; /* Указывает положение элемента по оси Z. Работает только с позиционированными элементами (absolute, relative, fixed, sticky).
+  absolute - элемент удаляется из обычного потока документа и становится выше всех других элементов обычного потока. Элемент позиционируется относительно ближайшего родителя с любым позиционированием, кроме position: static;
+  relative - позиционирование элемента относительно его исходного места;
+  fixed - элемент будет всегда находится в зоне просмотра(viewport) браузера и позиционироваться относительно зоны просмотра;
+  sticky - элемент остается в обычном потоке документа, а затем "прилипает" к ближайшему родителю с прокруткой и скроллится вместе с ним. В народе это называют "липким" элементом, который прилипает к верху экрана при прокрутке, когда прокрутка достигает этого элемента */
+}
+
+/* Contact */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 115px;
+}
+
+.contact__column1 {
+}
+
+.contact__form {
+  width: 383px;
+  height: 290px;
+}
+
+.input__suptitle {
+  /* display: inline-block;
+  margin-bottom: 75px; */
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+  letter-spacing: 0.06em;
+  line-height: 2;
+}
+
+.form__area {
+  background: #f0f0f0;
+  border-top: 1px solid #000;
+  width: 161px;
+  height: 35px;
+  font-size: 16px;
+}
+
+.form__area:focus {
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 74px;
+}
+
+.message__area {
+  resize: none;
+  background: #f0f0f0;
+  border-top: 1px solid #000;
+  width: 100%;
+  height: 120px;
+  font-size: 16px;
+}
+
+.message__area:focus {
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.contact__column2 {
+  width: 250px;
+  margin-left: 81px;
+}
+
+.contact__suptitle {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.857;
+  color: #000;
+}
+
+.fontsize {
+  font-size: 30px;
+  margin-top: 7px;
+  letter-spacing: 6px;
+}
+
+.fa-facebook-square {
+  color: rgba(59,89,152,1);
+}
+
+.fa-linkedin {
+  color: rgba(0,119,181,1);
+}
+
+.address {
+  font-style: normal;
+}
+
+.contact__btn {
+  text-align: center;
+  display: inline-block; /* чтобы сработал отступ вниз от ссылки для расширения серого фона */
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.06em;
+  margin-top: 43px;
+  margin-bottom: 50px;
+  border: 2px solid #000;
+  padding: 17px 40px;
+}
+
+.contact__btn:hover {
+  color: #ffffff;
+  border: 2px solid #000;
+  background-color: #6c6c6c;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #3c3c3c;
+ }
+
+@media (min-width: 297px) { /* применять эти свойства для экранов с шириной минимум в 297 px */
+
+  .footer__image {
+    display: block;
+    margin: 0 auto;
+    padding-top: 48px;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+  }
+
+  .footer__nav {
+    text-align: center;
+    margin-top: 39px;
+  }
+
+  .footer__item {
+    margin-right: 25px;
+    color: #a4a4a4;
+    font-size: 14px;
+  }
+
+  .footer__item:last-child {
+    margin-right: 0;
+  }
+
+  .footer__copyrights {
+    display: block;
+    color: #6c6c6c;
+    font-size: 14px;
+    margin: 0 auto;
+    margin-top: 32px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 296px) { /* применять эти свойства для экранов с шириной максимум до 296 px */
+
+  .footer__image {
+    display: block;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+  }
+
+  .footer__nav {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer__item {
+    margin-top: 20px;
+    display: block;
+    color: #a4a4a4;
+    font-size: 14px;
+  }
+
+  .footer__copyrights {
+    display: block;
+    color: #6c6c6c;
+    font-size: 14px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+}
+
+a.footer__item {
+  color: #a4a4a4;
+}
+
+a.footer__item:visited {
+  color: #a4a4a4;
+}
