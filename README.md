@@ -1,2 +1,2 @@
-#Ветка ficha.first.site
+# ficha.first.site
 Файлы залиты через консоль
