@@ -393,11 +393,11 @@ a.intro__link:visited {
   }
 
   .portfolio__item:nth-child(even):hover { /* для чётных элементов */
-    border: 20px solid #f00;
+    border: 20px solid #e00;
   }
 
   .portfolio__item:nth-child(odd):hover { /* для нечётных элементов */
-    border: 8px solid #00f;
+    border: 8px solid #00e;
   }
 
   .portfolio__item:nth-child(2):hover {
