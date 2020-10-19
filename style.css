@@ -420,6 +420,10 @@ a.intro__link:visited {
     transform: perspective(400px) rotateY(40deg);
     transition: transform .5s linear;
   }
+
+  .portfolio__item:last-child:hover { /* для последнего элемента */
+    border: 0;
+  }
 }
 
 @media (max-width: 1125px) { /* применять эти свойства для экранов с шириной максимум до 1125 px */
